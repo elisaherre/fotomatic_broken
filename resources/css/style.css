@@ -26,6 +26,7 @@ html {
 
 .image-container img {
   display: block;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -38,6 +39,7 @@ html {
 
 header {
   position: fixed;
+  z-index: 100;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
@@ -51,6 +53,7 @@ header .content {
 
 header .logo {
   flex: 1;
+  font-family: "Roboto Mono", monospace;
 }
 
 header nav ul {
@@ -60,6 +63,7 @@ header nav ul {
 nav li {
   padding-left: 3.5rem;
 }
+
 
 nav a {
   vertical-align: bottom;
@@ -280,6 +284,10 @@ header .mobile {
     margin: 0;
     padding: 1.25rem 1rem 0 1rem;
   }
+
+  .feature .content {
+    padding: 1.25rem 0 1.875rem 0;
+  }
 }
 
 /* Filters Section */
@@ -310,7 +318,7 @@ header .mobile {
 #filters-section .images-container {
   max-width: 100%;
   padding: 0 1%;
-  display: inline-flex;
+  display: flex;
 }
 
 @media only screen and (max-width: 760px) {
@@ -350,7 +358,10 @@ header .mobile {
 }
 
 #quotes-section .content {
-  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem;
 }
 
 #quotes-section .quote {
@@ -368,6 +379,7 @@ header .mobile {
 
 @media only screen and (max-width: 760px) {
   #quotes-section .content {
+    flex-flow: column;
     padding: 1.875rem .625rem;
   }
 
